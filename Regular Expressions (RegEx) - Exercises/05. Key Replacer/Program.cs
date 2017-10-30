@@ -11,26 +11,21 @@ namespace _05.Key_Replacer
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split(new char[]{'|', '<'}, StringSplitOptions.RemoveEmptyEntries);
+            var input = Console.ReadLine().Split(new char[]{'|', '<', '\\'}, StringSplitOptions.RemoveEmptyEntries);
             var startKey = input[0];
             var endKey = input[2];
             var line = Console.ReadLine();
             Regex regex = new Regex($@"{startKey}(?<word>.*?){endKey}");
-            var matches = regex.Matches(line).Cast<Match>().Select(a => a.Groups["word"].Value).ToArray();
-            string output = String.Empty;
-            foreach (var match in matches)
+            MatchCollection matches = regex.Matches(line);
+            var result = new StringBuilder();
+
+            foreach (Match match in matches)
             {
-                output += match;
+                result.Append(match.Groups["word"].Value);
             }
-            if (output == "")
-            {
-                Console.WriteLine("Empty result");
-            }
-            else
-            {
-                Console.WriteLine(output);
-            }
-            
+
+            Console.WriteLine(result.ToString().Length == 0 ? "Empty result" : result.ToString());
+
         }
     }
 }
