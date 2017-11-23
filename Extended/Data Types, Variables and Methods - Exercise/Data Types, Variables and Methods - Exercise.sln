@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Resurrection", "04. Resurrection\04. Resurrection.csproj", "{EA82D81D-910E-492C-A5A7-3307EEB2DF4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Wormtest", "05. Wormtest\05. Wormtest.csproj", "{001F0C43-22EA-41BA-A1DB-C94850289910}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA82D81D-910E-492C-A5A7-3307EEB2DF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA82D81D-910E-492C-A5A7-3307EEB2DF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA82D81D-910E-492C-A5A7-3307EEB2DF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA82D81D-910E-492C-A5A7-3307EEB2DF4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001F0C43-22EA-41BA-A1DB-C94850289910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001F0C43-22EA-41BA-A1DB-C94850289910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001F0C43-22EA-41BA-A1DB-C94850289910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001F0C43-22EA-41BA-A1DB-C94850289910}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
