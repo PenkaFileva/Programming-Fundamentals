@@ -4,68 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _15Substring
+public class Substring_broken
 {
-    class Program
+    public static void Main()
     {
-        public static void Main()
+        var text = Console.ReadLine();
+        int jump = int.Parse(Console.ReadLine());
+        bool hasMatch = false;
+
+        for (int i = 0; i < text.Length; i++)
         {
-            string[] input = Console.ReadLine().Trim().Split(' ');
-            int countSequences = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < countSequences; i++)
+            if (text[i] == 'p')
             {
-                var numbers = new List<int>();
+                hasMatch = true;
 
-                for (int j = 0; j < input.Length; j++)
+                int endIndex =jump+1;
+
+                if (endIndex +i > text.Length)
                 {
-                    if (!input[j].Equals(string.Empty))
-                    {
-                        int num = int.Parse(input[i]);
-                        numbers.Add(num);
-                    }
+                    endIndex = text.Length -i;
                 }
 
-                bool found = false;
-
-                for (int j = 0; j < numbers.Count; j++)
-                {
-                    int currentNum = numbers[j];
-
-                    if (currentNum > 0)
-                    {
-                        if (found)
-                        {
-                            Console.Write(" ");
-                        }
-
-                        Console.Write(currentNum);
-
-                        found = true;
-                    }
-                    else
-                    {
-                        currentNum += numbers[j + 1];
-
-                        if (currentNum > 0)
-                        {
-                            if (found)
-                            {
-                                Console.Write(" ");
-                            }
-
-                            Console.Write(currentNum);
-
-                            found = true;
-                        }
-                    }
-                }
-
-                if (!found)
-                {
-                    Console.WriteLine("(empty)");
-                }
+                string matchedString = text.Substring(i, endIndex);
+                Console.WriteLine(matchedString);
+                i += endIndex-1;
             }
+        }
+
+        if (!hasMatch)
+        {
+            Console.WriteLine("no");
         }
     }
 }
